@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<emIDE_project_file>
+	<FileVersion major="1" minor="7" />
+	<Project>
+		<Option title="LightControl" />
+		<Option pch_mode="2" />
+		<Option compiler="armelfgcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/LightControl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="armelfgcc" />
+				<PostOutput>
+					<ConvertedOutput PostOutputCreate="0" />
+					<ConvertedOutput PostOutputType="HEX" />
+					<ConvertedOutput PostOutputFile="${TARGET_OUTPUT_DIR}${TARGET_OUTPUT_BASENAME}" />
+				</PostOutput>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-mthumb" />
+			<Add option="-g" />
+			<Add option="-std=c99" />
+			<Add option="-mcpu=cortex-m4" />
+			<Add option="-mfpu=fpv4-sp-d16" />
+			<Add option="-mfloat-abi=hard" />
+			<Add option="-lm" />
+			<Add option="-DUSE_STDPERIPH_DRIVER" />
+			<Add option="-DSTM32F40_41xxx" />
+			<Add option="-DARM_MATH_CM4" />
+			<Add option="-DARM_MATH_MATRIX_CHECK" />
+			<Add option="-DARM_MATH_ROUNDING" />
+			<Add directory="Light_INC/applications" />
+			<Add directory="Light_INC/drivers" />
+			<Add directory="Light_INC/Libraries/inc" />
+			<Add directory="Light_INC/devices" />
+		</Compiler>
+		<Linker>
+			<Add option="-mthumb" />
+			<Add option="-std=c99" />
+			<Add option="-mcpu=cortex-m4" />
+			<Add option="-mfpu=fpv4-sp-d16" />
+			<Add option="-mfloat-abi=hard" />
+			<Add option="-lm" />
+			<Add option="-Wl,-Map" />
+			<Add option="-Wl,${TARGET_OUTPUT_FILE}.map" />
+			<Add option="-Wl,--gc-sections" />
+			<Add option="-n" />
+			<Add option="-Wl,-cref" />
+			<Add option="-TLight_INC\start\Flash.ld" />
+			<Add library="Light_INC\Libraries\inc\arm_cortexM4lf_math.a" />
+			<Add library="Light_INC\Libraries\inc\arm_cortexM4lf_math.lib" />
+		</Linker>
+		<PostOutput>
+			<ConvertedOutput PostOutputCreate="0" />
+			<ConvertedOutput PostOutputType="HEX" />
+			<ConvertedOutput PostOutputFile="${TARGET_OUTPUT_DIR}${TARGET_OUTPUT_BASENAME}" />
+		</PostOutput>
+		<Unit filename="Light_INC/Libraries/inc/arm_common_tables.h" />
+		<Unit filename="Light_INC/Libraries/inc/arm_const_structs.h" />
+		<Unit filename="Light_INC/Libraries/inc/arm_math.h" />
+		<Unit filename="Light_INC/Libraries/inc/cmsis_os.h" />
+		<Unit filename="Light_INC/Libraries/inc/core_cm4.h" />
+		<Unit filename="Light_INC/Libraries/inc/core_cm4_simd.h" />
+		<Unit filename="Light_INC/Libraries/inc/core_cmFunc.h" />
+		<Unit filename="Light_INC/Libraries/inc/core_cmInstr.h" />
+		<Unit filename="Light_INC/Libraries/inc/device_ak8975.h" />
+		<Unit filename="Light_INC/Libraries/inc/device_fatfs.h" />
+		<Unit filename="Light_INC/Libraries/inc/device_fatfs_conf.h" />
+		<Unit filename="Light_INC/Libraries/inc/device_iic.h" />
+		<Unit filename="Light_INC/Libraries/inc/device_led.h" />
+		<Unit filename="Light_INC/Libraries/inc/device_mpu6050.h" />
+		<Unit filename="Light_INC/Libraries/inc/device_ms5611.h" />
+		<Unit filename="Light_INC/Libraries/inc/device_pwm_in.h" />
+		<Unit filename="Light_INC/Libraries/inc/device_pwm_out.h" />
+		<Unit filename="Light_INC/Libraries/inc/device_timer.h" />
+		<Unit filename="Light_INC/Libraries/inc/device_usart.h" />
+		<Unit filename="Light_INC/Libraries/inc/device_w25qxx.h" />
+		<Unit filename="Light_INC/Libraries/inc/integer.h" />
+		<Unit filename="Light_INC/Libraries/inc/misc.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_adc.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_can.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_conf.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_crc.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_cryp.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_dac.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_dbgmcu.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_dcmi.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_dma.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_dma2d.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_exti.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_flash.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_fmc.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_fsmc.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_gpio.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_hash.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_i2c.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_iwdg.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_ltdc.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_pwr.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_rcc.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_rng.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_rtc.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_sai.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_sdio.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_spi.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_syscfg.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_tim.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_usart.h" />
+		<Unit filename="Light_INC/Libraries/inc/stm32f4xx_wwdg.h" />
+		<Unit filename="Light_INC/Libraries/inc/system_stm32f4xx.h" />
+		<Unit filename="Light_INC/Libraries/src/misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_adc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_can.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_crc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_cryp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_cryp_aes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_cryp_des.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_cryp_tdes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_dac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_dbgmcu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_dcmi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_dma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_dma2d.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_exti.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_fmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_fsmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_hash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_hash_md5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_hash_sha1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_it.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_iwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_ltdc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_pwr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_rcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_rng.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_rtc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_sai.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_sdio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_syscfg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_tim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/Libraries/src/stm32f4xx_wwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/Optical_Flow.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/Optical_Flow.h" />
+		<Unit filename="Light_INC/applications/ctrl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/ctrl.h" />
+		<Unit filename="Light_INC/applications/data_transfer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/data_transfer.h" />
+		<Unit filename="Light_INC/applications/filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/filter.h" />
+		<Unit filename="Light_INC/applications/height_ctrl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/height_ctrl.h" />
+		<Unit filename="Light_INC/applications/imu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/imu.h" />
+		<Unit filename="Light_INC/applications/init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/init.h" />
+		<Unit filename="Light_INC/applications/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/mymath.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/mymath.h" />
+		<Unit filename="Light_INC/applications/position_control.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/position_control.h" />
+		<Unit filename="Light_INC/applications/rc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/rc.h" />
+		<Unit filename="Light_INC/applications/scheduler.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/scheduler.h" />
+		<Unit filename="Light_INC/applications/time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/applications/time.h" />
+		<Unit filename="Light_INC/devices/device_ak8975.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/devices/device_ak8975.h" />
+		<Unit filename="Light_INC/devices/device_fatfs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/devices/device_fatfs.h" />
+		<Unit filename="Light_INC/devices/device_fatfs_conf.h" />
+		<Unit filename="Light_INC/devices/device_iic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/devices/device_iic.h" />
+		<Unit filename="Light_INC/devices/device_led.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/devices/device_led.h" />
+		<Unit filename="Light_INC/devices/device_mpu6050.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/devices/device_mpu6050.h" />
+		<Unit filename="Light_INC/devices/device_ms5611.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/devices/device_ms5611.h" />
+		<Unit filename="Light_INC/devices/device_pwm_in.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/devices/device_pwm_in.h" />
+		<Unit filename="Light_INC/devices/device_pwm_out.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/devices/device_pwm_out.h" />
+		<Unit filename="Light_INC/devices/device_timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/devices/device_timer.h" />
+		<Unit filename="Light_INC/devices/device_usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/devices/device_usart.h" />
+		<Unit filename="Light_INC/devices/integer.h" />
+		<Unit filename="Light_INC/drivers/database.h" />
+		<Unit filename="Light_INC/drivers/driver_GPS.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/drivers/driver_GPS.h" />
+		<Unit filename="Light_INC/drivers/driver_ak8975.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/drivers/driver_ak8975.h" />
+		<Unit filename="Light_INC/drivers/driver_disk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/drivers/driver_disk.h" />
+		<Unit filename="Light_INC/drivers/driver_led.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/drivers/driver_led.h" />
+		<Unit filename="Light_INC/drivers/driver_mpu6050.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/drivers/driver_mpu6050.h" />
+		<Unit filename="Light_INC/drivers/driver_ms5611.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/drivers/driver_ms5611.h" />
+		<Unit filename="Light_INC/drivers/driver_parameter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/drivers/driver_parameter.h" />
+		<Unit filename="Light_INC/drivers/driver_pwm_in.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/drivers/driver_pwm_in.h" />
+		<Unit filename="Light_INC/drivers/driver_pwm_out.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/drivers/driver_pwm_out.h" />
+		<Unit filename="Light_INC/drivers/driver_ultrasonic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/drivers/driver_ultrasonic.h" />
+		<Unit filename="Light_INC/drivers/driver_usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Light_INC/drivers/driver_usart.h" />
+		<Extensions>
+			<projectwizard TargetDevice="STM32F407VG" />
+			<code_completion />
+			<debugger>
+				<remote_debugging>
+					<options conn_type="1806320574" ip_address="localhost" ip_port="2331" remote_server="J-Link GDB Server" Break_at_Main="0" Break_at_Main_Symbol="main" />
+				</remote_debugging>
+				<remote_debugging target="Debug">
+					<options conn_type="0" serial_baud="115200" ip_address="localhost" ip_port="2331" remote_server="J-Link GDB Server" Break_at_Main="1" Break_at_Main_Symbol="main" additional_cmds="monitor reset&#x0A;load" />
+				</remote_debugging>
+			</debugger>
+			<J-Link>
+				<GDBServer TargetName="Debug">
+					<CmdOption UseGDBServer="1" />
+					<CmdOption TargetDevice="STM32F407VG" />
+					<CmdOption TargetInterface="1" />
+					<CmdOption InterfaceSpeed="300" />
+					<CmdOption TargetEndian="0" />
+					<CmdOption OverrideExe="0" Filename="C:\Program Files (x86)\SEGGER\JLinkARM_V486b\JLinkGDBServer.exe" />
+					<CmdOption StartServer="1" />
+					<CmdOption CloseServer="1" />
+					<CmdOption ServerIP="localhost" />
+					<CmdOption ServerPort="2331" />
+					<CmdOption UseAdvancedOptions="0" />
+					<CmdOption SelectJLink="" />
+					<CmdOption InitRegs="1" />
+					<CmdOption LocalhostOnly="1" />
+					<CmdOption Log="0" Filename="" />
+					<CmdOption Silent="0" />
+					<CmdOption StayOnTop="0" />
+					<CmdOption VerifyDownload="0" />
+					<CmdOption NoTargetTimeout="0" />
+					<CmdOption JTAGConf="0" IRPre="0" DRPre="0" />
+					<CmdOption JLinkScript="0" Filename="" />
+					<CmdOption JLinkSettings="0" Filename="" />
+					<CmdOption GDBInit="0" Filename="" />
+					<CmdOption AdditionalOptions="" />
+				</GDBServer>
+			</J-Link>
+		</Extensions>
+	</Project>
+</emIDE_project_file>
